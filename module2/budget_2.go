@@ -58,7 +58,7 @@ func (b *Budget) AddItem(description string, price float32) error {
 	}
 	newItem = Item{Description: description, Price: price}
 
-	b.Items = append(b.Items, newItems)
+	b.Items = append(b.Items, newItem)
 
 	return nil
 }
