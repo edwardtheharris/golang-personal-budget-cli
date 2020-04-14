@@ -56,7 +56,7 @@ func (b *Budget) AddItem(description string, price float32) error {
 	if b.CurrentCost()+price > b.Max {
 		return errDoesNotFitBudget
 	}
-	newItem = Item{Description: description, Price: price}
+	var newItem = Item{Description: description, Price: price}
 
 	b.Items = append(b.Items, newItem)
 
